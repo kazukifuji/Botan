@@ -1,0 +1,27 @@
+//パス
+$ROOT_PATH: '/';
+$IMG_PATH: $ROOT_PATH + 'assets/images/';
+$FONT_PATH: $ROOT_PATH + 'assets/fonts/';
+
+//色
+$DEF_BLACK: #333;
+$ACC_GREEN: #53e81e;
+$ACC_ORANGE: #eb813b;
+
+//フォント
+@font-face {
+  font-family: NotoSansJP;
+  src: url( $FONT_PATH + 'NotoSansJP-Regular.woff2' ) format('woff2');
+}
+
+@font-face {
+  font-family: Caveat;
+  src: url( $FONT_PATH + 'Caveat-Regular.woff2' ) format('woff2');
+}
+
+$DEF_FONTS: NotoSansJP, sans-serif;
+$LOGO_FONTS: Caveat, NotoSansJP, sans-serif;
+
+//ブレイクポイント
+$TC_BREAKPOINT: 600px;
+$PC_BREAKPOINT: 1025px;
