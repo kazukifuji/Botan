@@ -1,0 +1,14 @@
+.logo {
+  font-family: $LOGO_FONTS;
+  line-height: normal;
+  
+  &.global-menu__logo {
+    font-size: 5rem;
+    text-align: center;
+
+    @include mq( $PC_BREAKPOINT ) {
+      display: inline-block;
+      font-size: 3.4rem;
+    }
+  }
+}
