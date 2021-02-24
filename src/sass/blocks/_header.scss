@@ -1,0 +1,14 @@
+.header {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  width: 80%;
+
+  @include mq( $PC_BREAKPOINT ) {
+    height: 60px;
+    transform: none;
+    width: 100%;
+  }
+}
