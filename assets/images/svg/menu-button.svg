@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="66" height="60" viewBox="0 0 66 60">
-  <path d="M30,0H66V60H30A30,30,0,0,1,30,0Z" fill="#73a605"/>
-  <path d="M322.116,46.271h35" transform="translate(-302.116 -22.271)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
-  <path d="M322.116,46.271h35" transform="translate(-302.116 -10.271)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+  <g>
+    <title>Menu-Button</title>
+    <path d="M30,0H66V60H30A30,30,0,0,1,30,0Z" fill="#73a605"/>
+    <path d="M322.116,46.271h35" transform="translate(-302.116 -22.271)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    <path d="M322.116,46.271h35" transform="translate(-302.116 -10.271)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+  </g>
 </svg>
