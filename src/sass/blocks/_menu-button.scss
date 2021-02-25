@@ -6,6 +6,15 @@
 
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 
+  @include mq( $TC_BREAKPOINT ) {
+    left: -69px;
+
+    svg {
+      height: 77px;
+      width: 70px;
+    }
+  }
+
   @include mq( $PC_BREAKPOINT ) {
     visibility: hidden;
   }

@@ -1,9 +1,11 @@
 .global-menu {
+  @include wrapper();
   color: white;
   height: 100%;
   background-color: $ACC_GREEN;
   overflow-y: scroll;
-  padding: 50px 50px 100px 50px;
+  padding-top: 50px;
+  padding-bottom: 100px;
   width: 100%;
 
   //スクロールバーを非表示
@@ -24,6 +26,10 @@
 
   & > *:not(:last-child) {
     margin-bottom: 50px;
+
+    @include mq($TC_BREAKPOINT) {
+      margin-bottom: 80px;
+    }
 
     @include mq($PC_BREAKPOINT) {
       margin-bottom: 0;
@@ -46,7 +52,11 @@
       &::before {
         content: attr(data-ruby);
         display: block;
-        font-size: 1.2rem;
+        font-size: 1rem;
+
+        @include mq( $TC_BREAKPOINT ) {
+          font-size: 1.2rem;
+        }
 
         @include mq( $PC_BREAKPOINT ) {
           font-size: 0.8rem;
@@ -56,6 +66,10 @@
 
       &:not(:last-of-type) {
         margin-bottom: 20px;
+
+        @include mq( $TC_BREAKPOINT ) {
+          margin-bottom: 30px;
+        }
 
         @include mq( $PC_BREAKPOINT ) {
           margin-right: 60px;
@@ -67,6 +81,10 @@
     &-link {
       font-family: $LOGO_FONTS;
       font-size: 3rem;
+
+      @include mq( $TC_BREAKPOINT ) {
+        font-size: 4rem;
+      }
 
       @include mq( $PC_BREAKPOINT ) {
         font-size: 2.4rem;

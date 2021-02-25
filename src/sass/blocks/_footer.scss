@@ -14,6 +14,15 @@
   }
 
   &__copyright {
+    font-size: 1rem;
     text-align: center;
+
+    @include mq( $TC_BREAKPOINT ) {
+      font-size: 1.2rem;
+    }
+
+    @include mq( $PC_BREAKPOINT ) {
+      font-size: 1.4rem;
+    }
   }
 }

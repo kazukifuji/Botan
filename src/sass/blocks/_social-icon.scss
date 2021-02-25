@@ -1,4 +1,13 @@
 .social-icon {
   display: inline-block;
   margin: 0 5px;
+
+  @include mq( $TC_BREAKPOINT ) {
+    margin: 0 7px;
+
+    svg {
+      height: 45px;
+      width: 45px;
+    }
+  }
 }
