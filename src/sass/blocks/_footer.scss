@@ -1,0 +1,19 @@
+.footer {
+  @include wrapper();
+  background-color: $ACC_GREEN;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__social-icon-container {
+    text-align: center;
+  }
+
+  &__copyright {
+    text-align: center;
+  }
+}
