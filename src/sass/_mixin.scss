@@ -4,3 +4,8 @@
     @content;
   }
 }
+
+//「wrapper」ブロックのスタイル
+@mixin wrapper() {
+  padding: 0 9.5vw;
+}
