@@ -1,5 +1,6 @@
 .logo {
   font-family: $LOGO_FONTS;
+  font-weight: normal;
   line-height: normal;
   
   &.global-menu__logo {
@@ -13,6 +14,14 @@
     @include mq( $PC_BREAKPOINT ) {
       display: inline-block;
       font-size: 3.4rem;
+    }
+  }
+
+  &.hero-header__logo {
+    font-size: 6rem;
+
+    @include mq( $TC_BREAKPOINT ) {
+      font-size: 8rem;
     }
   }
 

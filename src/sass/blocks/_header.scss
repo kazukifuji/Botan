@@ -5,6 +5,7 @@
   right: 0;
   transform: translateX(100%);
   width: 80%;
+  z-index: 1;
 
   @include mq( $PC_BREAKPOINT ) {
     height: 60px;
