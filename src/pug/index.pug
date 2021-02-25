@@ -11,4 +11,12 @@ html(lang="ja")
   body
     include ./templates/_header
 
+    main#main.main 
+      //- ヒーローヘッダー
+      #hero-header.hero-header
+        .hero-header__heading 
+          span.hero-header__catchcopy カラダにやさしい、森のピザ屋さん。
+          h1.logo.hero-header__logo
+            a.link.logo__link.-no-style(href="") #{SITE_TITLE} 
+
     include ./templates/_footer
