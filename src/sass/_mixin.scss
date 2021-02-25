@@ -1,0 +1,11 @@
+//引数の値に応じたメディアクエリを返す
+@mixin mq( $breakpoint: $TC_BREAKPOINT, $type: min ) {
+  @media screen and ( #{$type}-width: #{$breakpoint} ) {
+    @content;
+  }
+}
+
+//「wrapper」ブロックのスタイル
+@mixin wrapper() {
+  padding: 0 9.5vw;
+}

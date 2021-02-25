@@ -1,0 +1,15 @@
+html {
+  color: $DEF_BLACK;
+  font-size: 62.5%;
+
+  @include mq( $TC_BREAKPOINT ) { font-size: 67%; }
+  @include mq( $PC_BREAKPOINT ) { font-size: 70%; }
+}
+
+body {
+  font-family: $DEF_FONTS;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  user-select: none;
+}

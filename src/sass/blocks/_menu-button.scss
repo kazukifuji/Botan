@@ -1,0 +1,12 @@
+.menu-button {
+  outline: none;
+  position: absolute;
+  top: 20px;
+  left: -65px;
+
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+  @include mq( $PC_BREAKPOINT ) {
+    visibility: hidden;
+  }
+}
