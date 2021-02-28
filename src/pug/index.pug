@@ -19,4 +19,41 @@ html(lang="ja")
           h1.logo.hero-header__logo
             a.link.logo__link.-no-style(href="") #{SITE_TITLE} 
 
+      //- 特徴１
+      section#feature-1.feature.-one
+        .feature__text-container 
+          h2.feature__heading 「こだわり」の
+            span.word 本格ピッツァ
+            
+          p ピッツァの本場「ナポリ」で修業したシェフが作る、材料から焼き方まで
+            span.word こだわった
+            |「超本格派」のピッツァを堪能できます。
+
+        .feature__img-container
+          picture 
+            source(
+              media=`(min-width: ${PC_BREAKPOINT})`,
+              srcset=`
+                ${IMG_PATH}jpg/feature-1-1-pc@2x.jpg 2x,
+                ${IMG_PATH}jpg/feature-1-1-pc.jpg 1x`
+            )
+            img.feature__img-1(
+              src=`${IMG_PATH}jpg/feature-1-1.jpg`,
+              alt="シェフ自慢のピザ窯の中で、高温でこんがり焼かれているミックスピッツァの様子。",
+              srcset=`${IMG_PATH}jpg/feature-1-1@2x.jpg 2x`
+            )
+
+          picture 
+            source(
+              media=`(min-width: ${PC_BREAKPOINT})`,
+              srcset=`
+                ${IMG_PATH}jpg/feature-1-2-pc@2x.jpg 2x,
+                ${IMG_PATH}jpg/feature-1-2-pc.jpg 1x`
+            )
+            img.feature__img-2(
+              src=`${IMG_PATH}jpg/feature-1-2.jpg`,
+              alt="お店自家製の野菜の味や匂いを細かく確認し、ピッツァに使う材料を厳選しているオーナーの姿。",
+              srcset=`${IMG_PATH}jpg/feature-1-2@2x.jpg 2x`
+            )
+
     include ./templates/_footer
