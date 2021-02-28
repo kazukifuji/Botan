@@ -10,6 +10,10 @@ body {
   font-family: $DEF_FONTS;
   font-size: 1.6rem;
   letter-spacing: 0.1em;
+  line-break: strict;
   line-height: 2;
+  overflow-wrap: break-word;
   user-select: none;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
