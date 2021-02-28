@@ -56,4 +56,58 @@ html(lang="ja")
               srcset=`${IMG_PATH}jpg/feature-1-2@2x.jpg 2x`
             )
 
+      //- 特徴２
+      section#feature-2.feature.-two
+        .feature__text-container 
+          h2.feature__heading 「有機栽培」で育てた自家製野菜を
+            span.word 使用
+            
+          p オーナー自ら有機栽培で育てたとれたて
+            span.word 新鮮
+            | の
+            snap.word 野菜
+            | を
+            span.word ふんだん
+            | に使用したピッツァは、しつこさが少なく、チーズと絶妙にマッチします。
+
+        .feature__img-container
+          picture 
+            source(
+              media=`(min-width: ${PC_BREAKPOINT})`,
+              srcset=`
+                ${IMG_PATH}jpg/feature-2-1-pc@2x.jpg 2x,
+                ${IMG_PATH}jpg/feature-2-1-pc.jpg 1x`
+            )
+            img.feature__img-1(
+              src=`${IMG_PATH}jpg/feature-2-1.jpg`,
+              alt="有機栽培で育てた、バスケットいっぱいの真っ赤なトマトです。",
+              srcset=`${IMG_PATH}jpg/feature-2-1@2x.jpg 2x`
+            )
+
+          picture 
+            source(
+              media=`(min-width: ${PC_BREAKPOINT})`,
+              srcset=`
+                ${IMG_PATH}jpg/feature-2-2-pc@2x.jpg 2x,
+                ${IMG_PATH}jpg/feature-2-2-pc.jpg 1x`
+            )
+            img.feature__img-2(
+              src=`${IMG_PATH}jpg/feature-2-2.jpg`,
+              alt="厳選した小麦から作って寝かせている、ピザ生地の写真。",
+              srcset=`${IMG_PATH}jpg/feature-2-2@2x.jpg 2x`
+            )
+
+          picture 
+            source(
+              media=`(min-width: ${PC_BREAKPOINT})`,
+              srcset=`
+                ${IMG_PATH}jpg/feature-2-3-pc@2x.jpg 2x,
+                ${IMG_PATH}jpg/feature-2-3-pc.jpg 1x`
+            )
+            img.feature__img-3(
+              src=`${IMG_PATH}jpg/feature-2-3.jpg`,
+              alt="ピザをとる際の、採れたての自家製野菜ととろーり伸びたチーズがとても美味しそうな写真。",
+              srcset=`${IMG_PATH}jpg/feature-2-3@2x.jpg 2x`
+            )
+
     include ./templates/_footer
