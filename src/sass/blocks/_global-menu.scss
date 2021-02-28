@@ -16,12 +16,13 @@
   }
 
   @include mq( $PC_BREAKPOINT ) {
-    @include wrapper();
     align-items: center;
     backdrop-filter:  brightness(0.8) blur(4px);
     background-color: transparent;
     display: flex;
     justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   & > *:not(:last-child) {
