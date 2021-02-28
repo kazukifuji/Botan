@@ -6,6 +6,13 @@
 }
 
 //「wrapper」ブロックのスタイル
-@mixin wrapper() {
-  padding: 0 9.5vw;
+@mixin wrapper( $type: 'padding' ) {
+  @if $type == 'padding' {
+    padding-right: 9.5vw;
+    padding-left: 9.5vw;
+  }
+  @else if $type == 'margin' {
+    margin-right: 9.5vw;
+    margin-left: 9.5vw;
+  }
 }
