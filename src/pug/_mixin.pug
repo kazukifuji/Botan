@@ -1,0 +1,25 @@
+//- 引数に応じたメニュー一覧を出力
+mixin menu-list( menuArr )
+  - var count = 0
+  ul.menu__list 
+
+    each menu in menuArr
+      - count++
+
+      li.menu__list-item
+        picture 
+          source(
+            media=`(min-width: ${PC_BREAKPOINT})`,
+            srcset=`
+              ${IMG_PATH}jpg/menu-${count}-pc@2x.jpg 2x,
+              ${IMG_PATH}jpg/menu-${count}-pc.jpg 1x`
+          )
+          img.menu__list-item-img(
+            src=`${IMG_PATH}jpg/menu-${count}.jpg`,
+            alt=`${menu.name}の写真。`,
+            srcset=`${IMG_PATH}jpg/menu-${count}@2x.jpg 2x`
+          )
+
+        h3.menu__list-item-name #{menu.name}
+        p.menu__list-item-price 〇,〇〇〇円
+        p.menu__list-item-desc #{menu.desc}
