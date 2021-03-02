@@ -1,4 +1,5 @@
 include ./_config
+include ./_mixin
 
 doctype doctype html
 html(lang="ja")
@@ -109,5 +110,28 @@ html(lang="ja")
               alt="ピザをとる際の、採れたての自家製野菜ととろーり伸びたチーズがとても美味しそうな写真。",
               srcset=`${IMG_PATH}jpg/feature-2-3@2x.jpg 2x`
             )
+
+      //- メニュー
+      article#menu.menu 
+        h2.heading.menu__heading(data-ruby="メニュー") Menu
+
+        +menu-list([
+          {
+            name: "ガーリックトマトソースのピッツァ",
+            desc: "自家製の完熟トマトとニンニクが美味しいピッツァです。旨みの強いソースとモチモチの生地が相性抜群。"
+          },
+          {
+            name: "４種のチーズとオリーブのピッツァ",
+            desc: "こだわりブレンドの４種のチーズとオリーブが絶妙です。生地はクリスピーでワインともよく合う大人なピッツァ。"
+          },
+          {
+            name: "パプリカと燻製ベーコンのピッツァ",
+            desc: "自家製の黄パプリカは火を通すと甘みが増し、燻製ベーコンの塩味とよく合います。店長イチオシのピッツァです。"
+          },
+          {
+            name: "豚肉たっぷりトルコピッツァ",
+            desc: "四角形でサクサクの生地が特徴のピッツァです。スパイシーなお肉と生地が相性バツグンで、食べ応え満点。"
+          }
+        ])
 
     include ./templates/_footer
