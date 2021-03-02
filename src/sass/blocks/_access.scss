@@ -1,0 +1,33 @@
+.access {
+  @include wrapper();
+
+  &__heading {
+    margin-bottom: 50px;
+  }
+
+  &__grid {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    text-align: center;
+
+    @include mq( $PC_BREAKPOINT ) {
+      grid-template-columns: 1.5fr 1fr;
+    }
+  }
+
+  &__map {
+    &-img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__text-container {
+    @include mq ( $PC_BREAKPOINT ) {
+      text-align: left;
+    }
+  }
+}
