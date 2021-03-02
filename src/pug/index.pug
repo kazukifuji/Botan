@@ -134,4 +134,20 @@ html(lang="ja")
           }
         ])
 
+      //- アクセスセクション
+      section#access.access
+        h2.heading.access__heading(data-ruby="アクセス") Access
+
+        .access__grid
+          .access__map 
+            img.access__map-img(
+              src=`${IMG_PATH}png/map.png`,
+              alt="「Botan」の店舗場所を示す地図画像。",
+              srcset=`${IMG_PATH}png/map@2x.png 2x`
+            )
+
+          .access__text-container
+            p 〇〇〇線〇〇駅より、徒歩〇分。
+            p 観光地〇〇〇から東に〇〇ｍ。
+
     include ./templates/_footer
