@@ -23,3 +23,14 @@ mixin menu-list( menuArr )
         h3.menu__list-item-name #{menu.name}
         p.menu__list-item-price 〇,〇〇〇円
         p.menu__list-item-desc #{menu.desc}
+
+//- 引数に応じた店舗概要テーブルを出力
+mixin about-table( aboutArr )
+  table.about__table
+    tbody.about__table-tbody
+
+      each about in aboutArr 
+      
+        tr.about__table-tr
+          td.about__table-td #{about.attr}
+          td.about__table-td #{about.value}
