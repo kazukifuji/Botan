@@ -4,6 +4,8 @@ const menuButton = document.getElementById('menu-button');
 const menuButtonG = menuButton.querySelector('svg > g');
 //ヘッダー要素
 const header = document.getElementById('header');
+//オーバーレイ要素
+const overlay = document.getElementById('overlay');
 //フラグ
 let flag = false;
 
@@ -19,6 +21,7 @@ menuButtonG.addEventListener( 'click', () => {
 function active() {
   menuButton.classList.add('-active');
   header.classList.add('-active');
+  overlay.classList.add('-active');
   flag = true;
 
   //windowにリサイズイベントを追加
@@ -30,6 +33,7 @@ function active() {
 function passive() {
   menuButton.classList.remove('-active');
   header.classList.remove('-active');
+  overlay.classList.remove('-active');
   flag = false;
 
   //windowのリサイズイベントを削除
