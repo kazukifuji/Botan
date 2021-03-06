@@ -1,4 +1,5 @@
 .menu-button {
+  cursor: default;
   outline: none;
   position: absolute;
   top: 20px;
@@ -6,16 +7,43 @@
 
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 
-  @include mq( $TC_BREAKPOINT ) {
-    left: -69px;
-
-    svg {
-      height: 77px;
-      width: 70px;
+  svg {
+    g {
+      cursor: pointer;
     }
+
+    path:nth-of-type(2),
+    path:nth-of-type(3) {
+      transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    path:nth-of-type(2) {
+      transform-origin: 37px calc( 50% + 6px );
+    }
+
+    path:nth-of-type(3) {
+      transform-origin: 37px calc( 50% - 6px );
+    }
+  }
+
+  @include mq( $TC_BREAKPOINT ) {
+    transform: scale(1.1);
+    transform-origin: right top;
   }
 
   @include mq( $PC_BREAKPOINT ) {
     visibility: hidden;
+  }
+
+  &.-active {
+    svg {
+      path:nth-of-type(2) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      path:nth-of-type(3) {
+        transform: translateY(6px) rotate(45deg);
+      }
+    }
   }
 }
