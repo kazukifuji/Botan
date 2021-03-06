@@ -150,4 +150,31 @@ html(lang="ja")
             p 〇〇〇線〇〇駅より、徒歩〇分。
             p 観光地〇〇〇から東に〇〇ｍ。
 
+      //- 店舗概要セクション
+      section#about.about 
+        h2.heading.about__heading(data-ruby="店舗概要") About
+
+        +about-table([
+          {
+            attr: "住所",
+            value: "〇〇〇〇〇〇〇〇〇ー〇〇",
+          },
+          {
+            attr: "TEL",
+            value: "〇〇〇-〇〇〇-〇〇〇〇",
+          },
+          {
+            attr: "E-Mail",
+            value: "〇〇〇〇.〇〇〇@〇〇〇.〇〇.〇〇",
+          },
+          {
+            attr: "営業時間",
+            value: "〇〇:〇〇~〇〇:〇〇",
+          },
+          {
+            attr: "定休日",
+            value: "毎週〇曜日",
+          }
+        ])
+
     include ./templates/_footer
