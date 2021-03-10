@@ -1,28 +1,33 @@
 .hero-header {
-  background-image: url( #{$IMG_PATH}jpg/header-sp.jpg );
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: calc( 100vh - 80px );
   position: relative;
 
-  @media ( min-resolution: 2dppx ) {
+  &__background-img {
     background-image: url( #{$IMG_PATH}jpg/header-sp.jpg );
-  }
-
-  @include mq( $TC_BREAKPOINT ) {
-    background-image: url( #{$IMG_PATH}jpg/header-tc.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc( 100vh - 80px );
+    width: 100%;
 
     @media ( min-resolution: 2dppx ) {
-      background-image: url( #{$IMG_PATH}jpg/header-tc@2x.jpg );
+      background-image: url( #{$IMG_PATH}jpg/header-sp.jpg );
     }
-  }
-
-  @include mq( $PC_BREAKPOINT ) {
-    background-image: url( #{$IMG_PATH}jpg/header-pc.jpg );
-
-    @media ( min-resolution: 2dppx ) {
-      background-image: url( #{$IMG_PATH}jpg/header-pc@2x.jpg );
+  
+    @include mq( $TC_BREAKPOINT ) {
+      background-image: url( #{$IMG_PATH}jpg/header-tc.jpg );
+  
+      @media ( min-resolution: 2dppx ) {
+        background-image: url( #{$IMG_PATH}jpg/header-tc@2x.jpg );
+      }
+    }
+  
+    @include mq( $PC_BREAKPOINT ) {
+      background-image: url( #{$IMG_PATH}jpg/header-pc.jpg );
+  
+      @media ( min-resolution: 2dppx ) {
+        background-image: url( #{$IMG_PATH}jpg/header-pc@2x.jpg );
+      }
     }
   }
 
