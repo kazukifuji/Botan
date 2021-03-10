@@ -9,6 +9,9 @@ const scenes = [];
 window.addEventListener( 'load', () => {
   //ヒーローヘッダーの背景画像にパララックスを実装
   heroHeaderBgImgParallax();
+
+  //ヒーローヘッダーの見出しにスクロールエフェクト（透過効果）を実装
+  heroHeaderHeadingScrollEffect();
   
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {
@@ -44,5 +47,31 @@ function heroHeaderBgImgParallax() {
 
   function getDuration() {
     return heroHeader.getBoundingClientRect().height;
+  }
+}
+
+
+//ヒーローヘッダーの見出しにスクロールエフェクト（透過効果）を実装
+function heroHeaderHeadingScrollEffect() {
+  const heroHeader = document.getElementById('hero-header');
+  if ( !heroHeader ) return;
+
+  const heroHeaderHeading = heroHeader.querySelector('.hero-header__heading');
+
+  const scene = new ScrollMagic.Scene({
+    duration: getDuration(),
+    triggerHook: 0
+  })
+  .on( 'progress', function(e) {
+    heroHeaderHeading.style.opacity = 1 - e.progress;
+  } )
+  .addTo( controller );
+
+  scene.adjust = function() { this.duration( getDuration() ) };
+
+  scenes.push( scene );
+
+  function getDuration() {
+    return heroHeader.getBoundingClientRect().height * 0.8;
   }
 }
