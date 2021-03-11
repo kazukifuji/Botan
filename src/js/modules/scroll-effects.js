@@ -1,9 +1,32 @@
-import ScrollMagic from 'scrollmagic'
+import ScrollMagic from 'scrollmagic';
 
 //コントローラーオブジェクト
 const controller = new ScrollMagic.Controller();
 //シーンオブジェクトの配列
 const scenes = [];
+
+//スクロールによるクラス切り替えを行うIntersectionObserverを作成
+const observer = new IntersectionObserver( entries => {
+  //監視要素に付属させるクラス名
+  const observeTargetClassName = 'observe-target';
+
+  entries.forEach( entry => {
+    if ( entry.isIntersecting ) {
+      if ( entry.target.classList.contains( observeTargetClassName ) ) {
+        entry.target.classList.add('-trigger');
+      }
+      observer.unobserve( entry.target );
+
+    } else {
+      //すでにターゲット要素が画面を通過済みの場合も監視対象から除外
+      if ( entry.boundingClientRect.top < entry.rootBounds.height ) {
+        observer.unobserver( entry.target );
+      } else {
+        entry.target.classList.add( observeTargetClassName );
+      }
+    }
+  } );
+}, { root: null, rootMargin: '0px 0px -25% 0px', threshold: 0 } );
 
 
 window.addEventListener( 'load', () => {
@@ -12,7 +35,7 @@ window.addEventListener( 'load', () => {
 
   //ヒーローヘッダーの見出しにスクロールエフェクト（透過効果）を実装
   heroHeaderHeadingScrollEffect();
-  
+
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {
     scenes.forEach( scene => {
