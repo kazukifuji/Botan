@@ -31,3 +31,19 @@
     font-size: 1.2rem;
   }
 }
+
+//「observe-target」ブロックの基本スタイル
+@mixin observe-target( $type: 1 ) {
+  @if $type == 1 {
+    &.observe-target {
+      opacity: 0;
+      transform: translateY(80px);
+
+      &.-trigger {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s linear, transform 0.8s cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+  }
+}
