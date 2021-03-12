@@ -23,6 +23,7 @@
     }
 
     &-item {
+      @include observe-target();
       word-break: normal;
 
       &-img {
