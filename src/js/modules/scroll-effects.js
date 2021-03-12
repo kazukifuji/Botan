@@ -39,6 +39,7 @@ window.addEventListener( 'load', () => {
   //各要素を監視
   addObserveTargets('[id^=feature] .feature__heading');
   addObserveTargets('[id^=feature] [class^=feature__img]');
+  addObserveTargets('#menu .menu__list-item');
 
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {
