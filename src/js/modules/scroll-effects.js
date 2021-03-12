@@ -36,6 +36,10 @@ window.addEventListener( 'load', () => {
   //ヒーローヘッダーの見出しにスクロールエフェクト（透過効果）を実装
   heroHeaderHeadingScrollEffect();
 
+  //各要素を監視
+  observer.observe( document.querySelector('#feature-1 .feature__heading') );
+  observer.observe( document.querySelector('#feature-2 .feature__heading') );
+  
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {
     scenes.forEach( scene => {
