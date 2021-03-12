@@ -41,6 +41,7 @@ window.addEventListener( 'load', () => {
   addObserveTargets('[id^=feature] [class^=feature__img]');
   addObserveTargets('#menu .menu__list-item');
   addObserveTargets('#access .access__map-img');
+  addObserveTargets('#about .about__table');
 
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {

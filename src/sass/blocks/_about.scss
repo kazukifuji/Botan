@@ -6,6 +6,7 @@
   }
 
   &__table {
+    @include observe-target();
     font-size: 1.4rem;
     margin-right: auto;
     margin-left: auto;
