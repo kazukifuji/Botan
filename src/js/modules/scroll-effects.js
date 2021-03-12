@@ -20,7 +20,7 @@ const observer = new IntersectionObserver( entries => {
     } else {
       //すでにターゲット要素が画面を通過済みの場合も監視対象から除外
       if ( entry.boundingClientRect.top < entry.rootBounds.height ) {
-        observer.unobserver( entry.target );
+        observer.unobserve( entry.target );
       } else {
         entry.target.classList.add( observeTargetClassName );
       }
@@ -38,8 +38,13 @@ window.addEventListener( 'load', () => {
 
   //各要素を監視
   observer.observe( document.querySelector('#feature-1 .feature__heading') );
+  observer.observe( document.querySelector('#feature-1 .feature__img-1') );
+  observer.observe( document.querySelector('#feature-1 .feature__img-2') );
   observer.observe( document.querySelector('#feature-2 .feature__heading') );
-  
+  observer.observe( document.querySelector('#feature-2 .feature__img-1') );
+  observer.observe( document.querySelector('#feature-2 .feature__img-2') );
+  observer.observe( document.querySelector('#feature-2 .feature__img-3') );
+
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {
     scenes.forEach( scene => {

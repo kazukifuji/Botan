@@ -107,6 +107,7 @@
     }
 
     &-1 {
+      @include observe-target();
       position: absolute;
       top: 0;
       left: 0;
@@ -115,6 +116,7 @@
     }
 
     &-2 {
+      @include observe-target();
       position: absolute;
       bottom: 0;
       right: 0;
@@ -161,6 +163,7 @@
     }
 
     &-1 {
+      @include observe-target();
       position: absolute;
       top: 0;
       right: 0;
@@ -169,6 +172,7 @@
     }
 
     &-2 {
+      @include observe-target();
       position: absolute;
       top: 40%;
       width: 40vw;
@@ -176,6 +180,7 @@
     }
 
     &-3 {
+      @include observe-target();
       position: absolute;
       bottom: 0;
       left: 12vw;
