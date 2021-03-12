@@ -37,13 +37,8 @@ window.addEventListener( 'load', () => {
   heroHeaderHeadingScrollEffect();
 
   //各要素を監視
-  observer.observe( document.querySelector('#feature-1 .feature__heading') );
-  observer.observe( document.querySelector('#feature-1 .feature__img-1') );
-  observer.observe( document.querySelector('#feature-1 .feature__img-2') );
-  observer.observe( document.querySelector('#feature-2 .feature__heading') );
-  observer.observe( document.querySelector('#feature-2 .feature__img-1') );
-  observer.observe( document.querySelector('#feature-2 .feature__img-2') );
-  observer.observe( document.querySelector('#feature-2 .feature__img-3') );
+  addObserveTargets('[id^=feature] .feature__heading');
+  addObserveTargets('[id^=feature] [class^=feature__img]');
 
   //ウィンドウのリサイズで各シーンを再調整
   window.addEventListener( 'resize', () => {
@@ -106,4 +101,11 @@ function heroHeaderHeadingScrollEffect() {
   function getDuration() {
     return heroHeader.getBoundingClientRect().height * 0.8;
   }
+}
+
+
+//スクロールによるクラス切り替えを行う要素を追加
+function addObserveTargets( selector ) {
+  const targets = [].slice.call( document.querySelectorAll( selector ) );
+  targets.forEach( target => observer.observe( target ) );
 }
