@@ -10,6 +10,11 @@ html(lang="ja")
     title #{SITE_TITLE}
 
   body
+    //- ローディング画面
+    #loading-screen.loading-screen 
+      .loading-screen__loading-icon
+        include ../../assets/images/svg/loading.svg
+
     include ./templates/_header
 
     #overlay.overlay
