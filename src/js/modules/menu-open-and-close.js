@@ -1,7 +1,5 @@
 //メニューボタン
 const menuButton = document.getElementById('menu-button');
-//メニューボタンのg要素
-const menuButtonG = menuButton.querySelector('svg > g');
 //グローバルメニュー内の各アンカーリンク要素
 const anchorLinks = [].slice.call( document.querySelectorAll('#global-menu a[href^="#"]') );
 //ヘッダー要素
@@ -12,8 +10,8 @@ const overlay = document.getElementById('overlay');
 let flag = false;
 
 
-//メニューボタンのg要素にクリックイベントを追加
-menuButtonG.addEventListener( 'click', () => {
+//メニューボタンにクリックイベントを追加
+menuButton.addEventListener( 'click', () => {
   if ( flag ) passive();
   else active();
 }, { passive: true } );
