@@ -17,22 +17,6 @@
   }
 }
 
-//「heading」ブロックのスタイル
-@mixin heading() {
-  font-family: $LOGO_FONTS;
-  font-size: 7rem;
-  font-weight: normal;
-  line-height: normal;
-  margin-bottom: 50px;
-  text-align: center;
-
-  &::before {
-    content: attr(data-ruby);
-    display: block;
-    font-size: 1.2rem;
-  }
-}
-
 //「observe-target」ブロックの基本スタイル
 @mixin observe-target( $type: 1 ) {
   @if $type == 1 {
