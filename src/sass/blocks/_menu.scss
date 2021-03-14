@@ -3,14 +3,6 @@
   color: white;
   padding: 100px 5vw;
 
-  & > *:not(:last-child) {
-    margin-bottom: 50px;
-  }
-
-  &__heading {
-    @include heading();
-  }
-
   &__list {
     display: grid;
     grid-template-columns: 1fr;
