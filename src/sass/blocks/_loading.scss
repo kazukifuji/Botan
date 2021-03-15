@@ -1,11 +1,6 @@
 .loading {
   animation: loading-stroke 1.8s infinite cubic-bezier(.4,0,.3,1), loading-rotate 1.5s infinite linear;
-	fill: none;
   height: 50px;
-	stroke: $ACC_ORANGE;
-  stroke-dasharray: 220 220;
-  stroke-linecap: round;
-	stroke-width: 8;
   width: 50px;
   
   @keyframes loading-stroke {
@@ -16,5 +11,9 @@
   @keyframes loading-rotate {
     from { transform: none; }
     to { transform: rotate(360deg); }
+  }
+
+  circle {
+    stroke: $ACC_ORANGE;
   }
 }
