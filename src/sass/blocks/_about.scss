@@ -1,10 +1,6 @@
 .about {
   @include wrapper();
 
-  &__heading {
-    margin-bottom: 50px;
-  }
-
   &__table {
     @include observe-target();
     font-size: 1.4rem;

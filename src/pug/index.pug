@@ -10,15 +10,8 @@ html(lang="ja")
     title #{SITE_TITLE}
 
   body
-    //- ローディング画面
-    #loading-screen.loading-screen 
-      .loading-screen__loading-icon
-        include ../../assets/images/svg/loading.svg
+    include ./templates/_head
 
-    include ./templates/_header
-
-    #overlay.overlay
-    
     //- ヒーローヘッダー
     #hero-header.hero-header
       .hero-header__background-img
@@ -186,4 +179,4 @@ html(lang="ja")
           }
         ])
 
-    include ./templates/_footer
+    include ./templates/_foot

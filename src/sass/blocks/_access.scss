@@ -1,10 +1,6 @@
 .access {
   @include wrapper();
 
-  &__heading {
-    margin-bottom: 50px;
-  }
-
   &__grid {
     align-items: center;
     display: grid;
