@@ -1,0 +1,103 @@
+.global-menu {
+  @include wrapper();
+  color: white;
+  height: 100%;
+  background-color: $ACC_GREEN;
+  overflow-y: scroll;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  width: 100%;
+
+  //スクロールバーを非表示
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+  &::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+      display:none;
+  }
+
+  @include mq( $PC_BREAKPOINT ) {
+    align-items: center;
+    backdrop-filter:  brightness(0.8) blur(4px);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 50px;
+
+    @include mq($TC_BREAKPOINT) {
+      margin-bottom: 80px;
+    }
+
+    @include mq($PC_BREAKPOINT) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav {
+    line-height: normal;
+
+    &-list {
+      list-style: none;
+
+      @include mq( $PC_BREAKPOINT ) {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    &-item {
+      &::before {
+        content: attr(data-ruby);
+        display: block;
+        font-size: 1rem;
+
+        @include mq( $TC_BREAKPOINT ) {
+          font-size: 1.2rem;
+        }
+
+        @include mq( $PC_BREAKPOINT ) {
+          font-size: 0.8rem;
+          text-align: center;
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+
+        @include mq( $TC_BREAKPOINT ) {
+          margin-bottom: 30px;
+        }
+
+        @include mq( $PC_BREAKPOINT ) {
+          margin-right: 60px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-link {
+      font-family: $LOGO_FONTS;
+      font-size: 3rem;
+
+      @include mq( $TC_BREAKPOINT ) {
+        font-size: 4rem;
+      }
+
+      @include mq( $PC_BREAKPOINT ) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &__social-icon-container {
+    text-align: center;
+
+    @include mq( $PC_BREAKPOINT ) {
+      display: none;
+    }
+  }
+}

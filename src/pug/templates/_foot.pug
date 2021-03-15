@@ -1,0 +1,24 @@
+//- フッター
+footer#footer.footer
+  p.logo.footer__logo #{SITE_TITLE}
+
+  .footer__social-icon-container 
+    span.social-icon.footer__social-icon
+      include ../../../assets/images/svg/twitter.svg
+
+    span.social-icon.footer__social-icon
+      include ../../../assets/images/svg/instagram.svg
+      
+    span.social-icon.footer__social-icon
+      include ../../../assets/images/svg/facebook.svg
+
+  p.footer__copyright 
+    small &copy; 2021 Botan All rights reserved.
+
+//- オーバーレイ
+#overlay.overlay
+
+//- ローディング画面
+#loading-screen.loading-screen 
+  .loading-screen__loading-icon
+    include ../../../assets/images/svg/loading.svg

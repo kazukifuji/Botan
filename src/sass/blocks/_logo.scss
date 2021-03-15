@@ -1,0 +1,36 @@
+.logo {
+  font-family: $LOGO_FONTS;
+  font-weight: normal;
+  line-height: normal;
+  
+  &.global-menu__logo {
+    font-size: 5rem;
+    text-align: center;
+
+    @include mq( $TC_BREAKPOINT ) {
+      font-size: 6rem;
+    }
+
+    @include mq( $PC_BREAKPOINT ) {
+      display: inline-block;
+      font-size: 3.4rem;
+    }
+  }
+
+  &.hero-header__logo {
+    font-size: 6rem;
+
+    @include mq( $TC_BREAKPOINT ) {
+      font-size: 8rem;
+    }
+  }
+
+  &.footer__logo {
+    font-size: 5rem;
+    text-align: center;
+    
+    @include mq( $TC_BREAKPOINT ) {
+      font-size: 6rem;
+    }
+  }
+}

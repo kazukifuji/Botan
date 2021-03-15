@@ -1,0 +1,34 @@
+//引数の値に応じたメディアクエリを返す
+@mixin mq( $breakpoint: $TC_BREAKPOINT, $type: min ) {
+  @media screen and ( #{$type}-width: #{$breakpoint} ) {
+    @content;
+  }
+}
+
+//「wrapper」ブロックのスタイル
+@mixin wrapper( $type: 'padding' ) {
+  @if $type == 'padding' {
+    padding-right: 9.5vw;
+    padding-left: 9.5vw;
+  }
+  @else if $type == 'margin' {
+    margin-right: 9.5vw;
+    margin-left: 9.5vw;
+  }
+}
+
+//「observe-target」ブロックの基本スタイル
+@mixin observe-target( $type: 1 ) {
+  @if $type == 1 {
+    &.observe-target {
+      opacity: 0;
+      transform: translateY(80px);
+
+      &.-trigger {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s linear, transform 0.8s cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+  }
+}

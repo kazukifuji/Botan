@@ -1,0 +1,29 @@
+.about {
+  @include wrapper();
+
+  &__table {
+    @include observe-target();
+    font-size: 1.4rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    &-tr {
+      & > *:first-child {
+        padding-right: 1em;
+        text-align: right;
+      }
+    }
+
+    &-td {
+      padding: 0.75em 0;
+    }
+
+    &-tr:first-child &-td {
+      padding-top: 0;
+    }
+
+    &-tr:last-child &-td {
+      padding-bottom: 0;
+    }
+  }
+}

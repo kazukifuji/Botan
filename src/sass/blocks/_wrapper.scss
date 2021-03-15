@@ -1,0 +1,4 @@
+.wrapper {
+  &:not(.-margin) { @include wrapper(); }
+  &.-margin { @include wrapper( 'margin' ); }
+}

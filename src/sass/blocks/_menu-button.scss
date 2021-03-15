@@ -1,0 +1,48 @@
+.menu-button {
+  background-color: $ACC_GREEN;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  height: 60px;
+  outline: none;
+  position: absolute;
+  top: 20px;
+  left: -60px;
+  width: 60px;
+
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+  @include mq( $TC_BREAKPOINT ) {
+    transform: scale(1.1);
+    transform-origin: right top;
+  }
+
+  @include mq( $PC_BREAKPOINT ) {
+    visibility: hidden;
+  }
+
+  &::before, &::after {
+    background-color: white;
+    border-radius: 1px;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    right: 10px;
+    transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+    width: 30px;
+  }
+
+  &::before { top: 23px; }
+
+  &::after { bottom: 23px; }
+
+  &.-active {
+    &::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+}

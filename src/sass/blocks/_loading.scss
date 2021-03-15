@@ -1,0 +1,19 @@
+.loading {
+  animation: loading-stroke 1.8s infinite cubic-bezier(.4,0,.3,1), loading-rotate 1.5s infinite linear;
+  height: 50px;
+  width: 50px;
+  
+  @keyframes loading-stroke {
+    from { stroke-dashoffset: 220; }
+    to { stroke-dashoffset: -220; }
+  }
+
+  @keyframes loading-rotate {
+    from { transform: none; }
+    to { transform: rotate(360deg); }
+  }
+
+  circle {
+    stroke: $ACC_ORANGE;
+  }
+}

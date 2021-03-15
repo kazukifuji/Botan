@@ -1,0 +1,54 @@
+.hero-header {
+  height: calc( 100vh - 80px );
+  position: relative;
+
+  &__background-img {
+    background-image: url( #{$IMG_PATH}jpg/header-sp.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc( 100vh - 80px );
+    width: 100%;
+
+    @media ( min-resolution: 2dppx ) {
+      background-image: url( #{$IMG_PATH}jpg/header-sp.jpg );
+    }
+  
+    @include mq( $TC_BREAKPOINT ) {
+      background-image: url( #{$IMG_PATH}jpg/header-tc.jpg );
+  
+      @media ( min-resolution: 2dppx ) {
+        background-image: url( #{$IMG_PATH}jpg/header-tc@2x.jpg );
+      }
+    }
+  
+    @include mq( $PC_BREAKPOINT ) {
+      background-image: url( #{$IMG_PATH}jpg/header-pc.jpg );
+  
+      @media ( min-resolution: 2dppx ) {
+        background-image: url( #{$IMG_PATH}jpg/header-pc@2x.jpg );
+      }
+    }
+  }
+
+  &__heading {
+    @include wrapper();
+    backdrop-filter:  brightness(0.8) blur(4px);
+    color: white;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+  }
+
+  &__catchcopy {
+    font-size: 1rem;
+    line-height: normal;
+
+    @include mq( $TC_BREAKPOINT ) {
+      font-size: 1.2rem;
+    }
+  }
+}

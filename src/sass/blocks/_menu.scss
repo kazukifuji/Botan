@@ -1,0 +1,38 @@
+.menu {
+  background-color: $ACC_ORANGE;
+  color: white;
+  padding: 100px 5vw;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5vw;
+    grid-row-gap: 50px;
+    list-style: none;
+
+    @include mq( $TC_BREAKPOINT ) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-item {
+      @include observe-target();
+      word-break: normal;
+
+      &-img {
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      &-name {
+        font-size: 1.8rem;
+        line-height: normal;
+      }
+
+      &-price {
+        font-size: 1.2rem;
+        text-align: right;
+      }
+    }
+  }
+}
